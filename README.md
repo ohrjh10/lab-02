@@ -20,4 +20,30 @@ Question 3: How did the speed of the TCP response change? Why might this happen?
 Answer for Question 3: For the TCP, the speed of receiving data became much slower compared to before. 
 TCP protocol are safer in a sense that data is much less likely to be lost during the delivery process. 
 However, since data are checked so that they are not lost during the process, it takes up more time for the process to finish.
+
+QUESTIONS FROM tcp_server.c
+1. What is argc and *argv[]?
+Answer: argc is the number of arguments on the command line pointed by argv, and *argv[] is the arrays of the argument vector.
+
+2. What is a UNIX file descriptor and file descriptor table?
+Answer: The file descriptor is an identifier for a file or other input/output between the user and the kernel space.
+The file descriptor table is the collection of unsigned integers used in the process to identify an open file.
+
+3. What is a struct? What's the structure of sockaddr_in?
+Answer: Struct is used to group variable that are related(depending on the type). 
+The structure of specifies a transport address and port for the AF_INET address group.
+
+4. What are the input parameters and return value of socket()
+Answer: The socket() argument takes inputs such as domain, type of socket, protocol, and the address information to designate the address type.
+The return value is the file descriptor which is typically a non-negative integer.
+
+5. What are the input parameters of bind() and listen()?
+Answer:
+
+6. Why use while(1)? Based on the code below, what problems might occur if there are multiple simultaneous connections to handle?
+Answer:
+
+7. Research how the command fork() works. How can it be applied here to better handle multiple connections?
+Answer:
+
 ...
