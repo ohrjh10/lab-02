@@ -45,6 +45,10 @@ The listen() takes inputs such as the socket descriptor and number of requests t
 Answer: The while loop is used for the server to read and write to the socket, sending messages back and forth between the client and the server. The server might be closed before the full message is printed if there are multiple simultaneous connections.
 
 7. Research how the command fork() works. How can it be applied here to better handle multiple connections?
-Answer: 
+Answer: fork() creates a new process which is referred to as the child process. 
+The child process and the parent process are identical but have different address. 
+When the child process is successful, it returns back to its parent process.
+This allows multiple tasks to run independently of one another as though they each had the full memory of the machine to themselves.
+It can be applied here to prevent the system from crashing from multiple connections using fork().
 
 ...
